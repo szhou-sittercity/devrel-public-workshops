@@ -70,7 +70,9 @@ def selected_quotes(context: dict):
         "short_q": short_quote,
         "long_q": long_quote,
     }
-
+    
+@asset(schedule="@daily")
+def formatted_newsletter(context: dict):
 """
 Formats the newsletter.
 """
