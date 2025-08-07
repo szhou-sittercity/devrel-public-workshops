@@ -19,7 +19,7 @@ def raw_zen_quotes(context: dict):
     """
     import requests
 
-    r = requests.get("https://zenquotes.io/api/quotes")
+    r = requests.get("https://zenquotes.io/api/quotes/random")
     quotes = r.json()
 
     run_date = context["dag_run"].logical_date.strftime("%Y-%m-%d")
