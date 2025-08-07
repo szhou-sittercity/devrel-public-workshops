@@ -12,7 +12,7 @@ OBJECT_STORAGE_PATH_NEWSLETTER = os.getenv(
 )
 
 
-@asset(schedule="@daily")
+@asset(schedule=[personalize_newsletter])
 def raw_zen_quotes(context: dict):
     """
     Extracts a random set of quotes.
